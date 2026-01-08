@@ -201,3 +201,4 @@ PATH=${JAVA_HOME}/bin:${PATH}
 
 #  Git
 PATH=${PATH}:"/c/Program Files/Git/cmd"
+PATH=${PATH}:"/c/Program Files/Git/usr/bin"

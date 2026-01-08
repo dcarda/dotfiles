@@ -3,7 +3,7 @@
     name = Your Name
     email = YourName@YourDomain.net
     username = YourName
-
+	
 [diff]
     tool = winmerge
     guitool = winmerge

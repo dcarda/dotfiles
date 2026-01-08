@@ -7,20 +7,23 @@
 [diff]
     tool = winmerge
     guitool = winmerge
+[difftool "winmerge"]
+    name = WinMerge
+    cmd = \"D:\\\\Tools\\\\Programming\\\\WinMerge\\\\WinMergeU.exe\" -u -e \"$LOCAL\" \"$REMOTE\"
+    trustExitCode = true
 [difftool]
     prompt = false
-[difftool "winmerge"]
-    path = D:/Tools/WinMerge/WinMergeU.exe
-    cmd = "'D:/Tools/WinMerge/WinMergeU.exe'" -e "$LOCAL" "$REMOTE"
 
 [merge]
-    prompt=false
-    tool = BeyondCompare4
-[mergetool "BeyondCompare4"]
-    trustExitCode=true
-    path = D:/Tools/Programming/BeyondCompare4/BComp.exe
-    cmd = \"D:/Tools/Programming/BeyondCompare4/BComp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
-    keepBackup = true
+    tool = winmerge
+[mergetool "winmerge"]
+    name = WinMerge
+    trustExitCode = true
+    cmd = \"D:\\\\Tools\\\\Programming\\\\WinMerge\\\\WinMergeU.exe\" -u -e -dl \"Local\" -dr \"Remote\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+    keepBackup = false
+    keepTemporaries = false    
+[mergetool]
+    prompt = false
 
 [push]
     default = simple
@@ -69,3 +72,5 @@
 
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+
+

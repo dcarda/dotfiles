@@ -1,0 +1,76 @@
+# vi: ft=dosini
+[user]
+    name = Daniel Carda
+    email = GoneBy2025@CardaTechnologies.com
+    username = dcarda
+
+[diff]
+    tool = winmerge
+    guitool = winmerge
+[difftool "winmerge"]
+    name = WinMerge
+    cmd = \"D:\\\\Tools\\\\Programming\\\\WinMerge\\\\WinMergeU.exe\" -u -e \"$LOCAL\" \"$REMOTE\"
+    trustExitCode = true
+[difftool]
+    prompt = false
+
+[merge]
+    tool = winmerge
+[mergetool "winmerge"]
+    name = WinMerge
+    trustExitCode = true
+    cmd = \"D:\\\\Tools\\\\Programming\\\\WinMerge\\\\WinMergeU.exe\" -u -e -dl \"Local\" -dr \"Remote\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+    keepBackup = false
+    keepTemporaries = false    
+[mergetool]
+    prompt = false
+
+[push]
+    default = simple
+
+[http]
+    sslVerify = false
+	postBuffer = 1048576000
+	lowSpeedLimit = 0
+	lowSpeedTime = 999999
+#    proxy = http://<PROXY IP ADDRESS>:8080/
+
+[core]
+    preloadindex = true
+    fscache = true
+    editor = \"C:\\Program Files\\Notepad++\\notepad++.exe\" -multiInst -nosession
+    autocrlf = false
+    symlinks=false
+    repositoryformatversion=0
+    filemode=false
+    bare=false
+    logallrefupdates=true
+    hidedotfiles=dotGitOnly
+    ignorecase=true
+#    http.sslverify=false
+
+[color]    
+    diff=auto
+    status=auto
+    branch=auto
+    interactive=true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[gc]
+    auto = 256
+
+[help]
+    format=html
+
+[status]
+    submoduleSummary = false
+
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+
+

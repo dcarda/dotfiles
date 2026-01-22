@@ -195,9 +195,8 @@
 #  by Mike Stewart - http://MediaDoneRight.com
 
 #  Adjust PATH environment variable(s)
-
-JAVA_HOME=/d/Tools/Java/JDK/AmazonCorretto/jdk21.0.9_10
-PATH=${JAVA_HOME}/bin:${PATH}
+export JAVA_HOME=/d/Tools/Java/JDK/AmazonCorretto/jdk17.0.18_8
+export PATH=${PATH}:${JAVA_HOME}/bin
 
 #  Git
 PATH=${PATH}:"/c/Program Files/Git/cmd"

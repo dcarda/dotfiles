@@ -1,9 +1,9 @@
 # vi: ft=dosini
 [user]
-    name = Your Name
-    email = YourName@YourDomain.net
-    username = YourName
-	
+    name = Daniel Carda
+    email = GoneBy2025@CardaTechnologies.com
+    username = dcarda
+
 [diff]
     tool = winmerge
     guitool = winmerge

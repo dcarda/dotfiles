@@ -156,8 +156,8 @@ if [ $? -eq 0 ]; then \
             echo "\n┌─ '$IGreen$Time12h$Color_Off''$Green'"$(__git_ps1 " [%s]"); \
   else \
             # @5 - Changes to working tree
-            echo "\n┌─ '$IGreen$Time12h$Color_Off'  '$BWhite$On_Red'"$(__git_ps1 " [%s]"); \
-  fi) \n'$Color_Off'│ '$BYellow$PathShort$Color_Off'   \n└─▶ "; \
+            echo "\n┌─ '$IGreen$Time12h$Color_Off'  '$BWhite$On_Red'"$(__git_ps1 " [%s]  '$On_Black'"); \
+  fi) \n'$Color_Off'│ '$BYellow$PathShort$Color_Off' \[\033[0m\]  \n└─▶ "; \
 else \
   # @2 - Prompt when not in GIT repo
   echo "  \n[Development System] - '$BIGreen' \w\n '$IPurple'[ \[\033[36m\]\u \[\033[0;95m\]]  \[\033[0;93m\] \D{} -> \[\033[0m\] "
